@@ -1,7 +1,7 @@
 module.exports = (sequelize, dataTypes) => {
-    let alias = "Notas";
+    let alias = "Eventos";
     let cols = {
-      id_nota: {
+      id_evento: {
         type: dataTypes.INTEGER,
         primaryKey: true,
         autoIncrement: true,
@@ -11,15 +11,16 @@ module.exports = (sequelize, dataTypes) => {
       },
       titulo: {
         type: dataTypes.TEXT,
-      },
+      }
     };
     let config = {
-      tableName: "notas",
+      tableName: "eventos",
       timestamps: false,
     };
   
-    const Notas = sequelize.define(alias, cols, config);
+    const Eventos = sequelize.define(alias, cols, config);
+  
 
-    return Notas;
+    return Eventos;
   };
   

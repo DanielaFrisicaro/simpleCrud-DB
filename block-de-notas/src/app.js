@@ -5,7 +5,7 @@ const methodOverride = require('method-override')
 //llamo a los enrutadores
 const mainRoute = require('./routes/mainRoute');
 const notaRoute = require ('./routes/notaRoute')
-
+const eventoRoute= require ('./routes/eventoRoute')
 
 //habilitar las peticiones put y delete
 
@@ -21,7 +21,8 @@ app.set('view engine', 'ejs')
 app.set('views', path.join(__dirname, './views'))//estoy dentro de src, por eso solo con llamar a /views va a ingresar
 //uso los enrutadores
 app.use('/', mainRoute);
-app.use('/notas', notaRoute)
+app.use('/notas', notaRoute);
+app.use('/eventos',eventoRoute)
 
 //escucho al puerto
 app.listen(3000, () =>{
